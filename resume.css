@@ -1,0 +1,530 @@
+/*=========================================
+ resume.css (Part 1)
+ AI Interview Preparation
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --primary:#2563eb;
+    --secondary:#0f172a;
+    --success:#22c55e;
+    --danger:#ef4444;
+    --warning:#f59e0b;
+    --light:#f8fafc;
+    --white:#ffffff;
+    --gray:#64748b;
+    --border:#e5e7eb;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+body{
+    background:#f5f7fb;
+    color:#1e293b;
+}
+
+/*============== Layout ==============*/
+
+.resume-page{
+    display:flex;
+    min-height:100vh;
+}
+
+/*============== Sidebar ==============*/
+
+.sidebar{
+    width:260px;
+    background:var(--secondary);
+    color:#fff;
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    padding:30px 20px;
+}
+
+.sidebar .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:40px;
+}
+
+.sidebar .logo i{
+    font-size:34px;
+    color:#60a5fa;
+}
+
+.sidebar .logo h2{
+    font-size:24px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin-bottom:12px;
+}
+
+.sidebar ul li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:#cbd5e1;
+    padding:14px 18px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar ul li.active a,
+.sidebar ul li a:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+/*============== Main Content ==============*/
+
+.main-content{
+    flex:1;
+    margin-left:260px;
+    padding:35px;
+}
+
+.page-header{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    font-size:34px;
+    color:var(--secondary);
+}
+
+.page-header p{
+    color:var(--gray);
+    margin-top:8px;
+}
+
+/*============== Upload Card ==============*/
+
+.upload-card{
+    background:#fff;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:40px;
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.upload-icon{
+    font-size:60px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.upload-card h2{
+    margin-bottom:10px;
+    color:var(--secondary);
+}
+
+.upload-card p{
+    color:var(--gray);
+    margin-bottom:25px;
+}
+
+.upload-card input[type="file"]{
+    display:block;
+    width:100%;
+    margin:20px auto;
+    padding:12px;
+    border:2px dashed var(--border);
+    border-radius:10px;
+}
+
+#analyzeBtn{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:14px 35px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#analyzeBtn:hover{
+    background:#1d4ed8;
+}
+/*=========================================
+ resume.css (Part 2)
+ Analysis Section
+=========================================*/
+
+/*============== Analysis Section ==============*/
+
+.analysis-section{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:25px;
+    margin-bottom:35px;
+}
+
+/*============== Score Card ==============*/
+
+.score-card{
+    background:#fff;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:30px;
+    text-align:center;
+}
+
+.score-card h2{
+    color:var(--secondary);
+    margin-bottom:25px;
+}
+
+.score-circle{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:conic-gradient(
+        var(--success) 0deg 306deg,
+        #e5e7eb 306deg 360deg
+    );
+}
+
+.score-circle span{
+    width:135px;
+    height:135px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    font-weight:700;
+    color:var(--secondary);
+}
+
+/*============== Skills Card ==============*/
+
+.skills-card{
+    background:#fff;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:30px;
+}
+
+.skills-card h2{
+    color:var(--secondary);
+    margin-bottom:20px;
+}
+
+.skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill-list span{
+    background:#dbeafe;
+    color:#1d4ed8;
+    padding:10px 18px;
+    border-radius:25px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.skill-list span:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+/*============== Detail Cards ==============*/
+
+.details-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.detail-card{
+    background:#fff;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:28px;
+}
+
+.detail-card h2{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.detail-card ul{
+    list-style:none;
+}
+
+.detail-card ul li{
+    padding:12px 0;
+    border-bottom:1px solid var(--border);
+    color:var(--gray);
+}
+
+.detail-card ul li:last-child{
+    border-bottom:none;
+}
+
+/*============== Card Colors ==============*/
+
+.strengths h2 i{
+    color:var(--success);
+}
+
+.weaknesses h2 i{
+    color:var(--danger);
+}
+
+.missing h2 i{
+    color:var(--warning);
+}
+
+.suggestions h2 i{
+    color:var(--primary);
+}
+/*=========================================
+ resume.css (Part 3)
+ Buttons, Table, Footer,
+ Responsive & Animation
+=========================================*/
+
+/*============== Action Buttons ==============*/
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:14px 30px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.primary-btn{
+    background:var(--primary);
+    color:#fff;
+}
+
+.primary-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.secondary-btn{
+    background:#e2e8f0;
+    color:var(--secondary);
+}
+
+.secondary-btn:hover{
+    background:#cbd5e1;
+    transform:translateY(-3px);
+}
+
+/*============== History Table ==============*/
+
+.history-section{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    margin-bottom:35px;
+}
+
+.history-section h2{
+    margin-bottom:20px;
+    color:var(--secondary);
+}
+
+.history-section table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.history-section th{
+    background:var(--primary);
+    color:#fff;
+    padding:15px;
+    text-align:left;
+}
+
+.history-section td{
+    padding:15px;
+    border-bottom:1px solid var(--border);
+}
+
+.history-section tr:hover{
+    background:#f8fafc;
+}
+
+/*============== Footer ==============*/
+
+.page-footer{
+    background:#fff;
+    padding:20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.page-footer p{
+    color:var(--gray);
+}
+
+/*============== Animation ==============*/
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.upload-card,
+.score-card,
+.skills-card,
+.detail-card,
+.history-section,
+.page-footer{
+    animation:fadeUp .6s ease;
+}
+
+/*============== Responsive ==============*/
+
+@media(max-width:992px){
+
+    .analysis-section{
+        grid-template-columns:1fr;
+    }
+
+    .details-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        width:80px;
+        padding:20px 10px;
+    }
+
+    .sidebar .logo h2{
+        display:none;
+    }
+
+    .sidebar ul li a{
+        justify-content:center;
+        font-size:0;
+    }
+
+    .sidebar ul li a i{
+        font-size:20px;
+    }
+
+    .main-content{
+        margin-left:80px;
+        padding:20px;
+    }
+
+    .history-section{
+        overflow-x:auto;
+    }
+
+    .history-section table{
+        min-width:650px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:15px;
+    }
+
+    .page-header h1{
+        font-size:26px;
+    }
+
+    .score-circle{
+        width:150px;
+        height:150px;
+    }
+
+    .score-circle span{
+        width:110px;
+        height:110px;
+        font-size:28px;
+    }
+
+}
+
+/*============== Utility Classes ==============*/
+
+.text-center{
+    text-align:center;
+}
+
+.mt-20{
+    margin-top:20px;
+}
+
+.mb-20{
+    margin-bottom:20px;
+}
+
+.hidden{
+    display:none;
+}

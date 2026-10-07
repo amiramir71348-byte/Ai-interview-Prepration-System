@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AI Mock Interview</title>
+
+<link rel="stylesheet"
+href="interview.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="interview-page">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-brain"></i>
+
+<h2>AI Interview</h2>
+
+</div>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="resume.html">
+<i class="fa-solid fa-file"></i>
+Resume
+</a>
+</li>
+
+<li class="active">
+<a href="interview.html">
+<i class="fa-solid fa-microphone"></i>
+Mock Interview
+</a>
+</li>
+
+<li>
+<a href="chatbot.html">
+<i class="fa-solid fa-robot"></i>
+AI Chatbot
+</a>
+</li>
+
+<li>
+<a href="history.html">
+<i class="fa-solid fa-clock-rotate-left"></i>
+History
+</a>
+</li>
+
+<li>
+<a href="profile.html">
+<i class="fa-solid fa-user"></i>
+Profile
+</a>
+</li>
+
+<li>
+<a href="login.html">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main-content">
+
+<header class="page-header">
+
+<h1>AI Mock Interview</h1>
+
+<p>
+
+Practice Technical, HR and Aptitude Interviews
+with Artificial Intelligence.
+
+</p>
+
+</header>
+
+<!-- Interview Setup -->
+
+<section class="setup-card">
+
+<h2>Select Interview Type</h2>
+
+<select id="interviewType">
+
+<option>HR Interview</option>
+
+<option>Technical Interview</option>
+
+<option>Aptitude Interview</option>
+
+<option>Behavioral Interview</option>
+
+</select>
+
+<h2>Difficulty Level</h2>
+
+<select id="difficulty">
+
+<option>Easy</option>
+
+<option>Medium</option>
+
+<option>Hard</option>
+
+</select>
+
+<button id="startInterview">
+
+Start Interview
+
+</button>
+
+</section>
+<!-- Interview Screen -->
+
+<section class="interview-section">
+
+    <!-- Left Panel -->
+
+    <div class="question-panel">
+
+        <div class="question-header">
+
+            <h2>Current Question</h2>
+
+            <div class="timer">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <span id="timer">05:00</span>
+
+            </div>
+
+        </div>
+
+        <div class="question-box">
+
+            <h3 id="questionNumber">
+
+                Question 1
+
+            </h3>
+
+            <p id="questionText">
+
+                Tell me about yourself and explain your
+                educational background in detail.
+
+            </p>
+
+        </div>
+
+        <div class="answer-box">
+
+            <label>
+
+                Your Answer
+
+            </label>
+
+            <textarea
+                id="answer"
+                rows="10"
+                placeholder="Type your answer here...">
+            </textarea>
+
+        </div>
+
+        <div class="button-group">
+
+            <button id="submitAnswer">
+
+                Submit Answer
+
+            </button>
+
+            <button id="nextQuestion">
+
+                Next Question
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Right Panel -->
+
+    <div class="camera-panel">
+
+        <h2>Interview Preview</h2>
+
+        <div class="camera-box">
+
+            <video
+                id="camera"
+                autoplay
+                muted
+                playsinline>
+            </video>
+
+        </div>
+
+        <div class="status-box">
+
+            <div class="status-item">
+
+                <i class="fa-solid fa-video"></i>
+
+                <span>
+
+                    Camera:
+                    <strong id="cameraStatus">
+                        Off
+                    </strong>
+
+                </span>
+
+            </div>
+
+            <div class="status-item">
+
+                <i class="fa-solid fa-microphone"></i>
+
+                <span>
+
+                    Microphone:
+                    <strong id="micStatus">
+                        Off
+                    </strong>
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <button id="enableCamera">
+
+            Enable Camera & Microphone
+
+        </button>
+
+    </div>
+
+</section>
+<!-- AI Feedback -->
+
+        <section class="feedback-section">
+
+            <h2>AI Interview Feedback</h2>
+
+            <div class="feedback-grid">
+
+                <div class="feedback-card">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <h3>Overall Score</h3>
+
+                    <span id="overallScore">0%</span>
+
+                </div>
+
+                <div class="feedback-card">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <h3>Communication</h3>
+
+                    <span id="communicationScore">0%</span>
+
+                </div>
+
+                <div class="feedback-card">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <h3>Technical Knowledge</h3>
+
+                    <span id="technicalScore">0%</span>
+
+                </div>
+
+                <div class="feedback-card">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h3>Confidence</h3>
+
+                    <span id="confidenceScore">0%</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- AI Suggestions -->
+
+        <section class="suggestion-section">
+
+            <h2>AI Suggestions</h2>
+
+            <ul id="suggestionList">
+
+                <li>Maintain eye contact during the interview.</li>
+
+                <li>Answer using the STAR method.</li>
+
+                <li>Improve confidence while speaking.</li>
+
+                <li>Explain projects with measurable results.</li>
+
+                <li>Avoid unnecessary pauses.</li>
+
+            </ul>
+
+        </section>
+
+        <!-- Interview Controls -->
+
+        <section class="interview-controls">
+
+            <button id="endInterview" class="danger-btn">
+
+                End Interview
+
+            </button>
+
+            <button id="downloadResult" class="primary-btn">
+
+                Download Report
+
+            </button>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="page-footer">
+
+            <p>
+
+                © 2026 AI Interview Preparation System.
+                AI Mock Interview Module.
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="interview.js"></script>
+
+</body>
+
+</html>

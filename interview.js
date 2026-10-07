@@ -1,0 +1,239 @@
+/*=========================================
+ interview.js
+ AI Interview Preparation
+=========================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const startBtn = document.getElementById("startInterview");
+    const enableBtn = document.getElementById("enableCamera");
+    const submitBtn = document.getElementById("submitAnswer");
+    const nextBtn = document.getElementById("nextQuestion");
+    const endBtn = document.getElementById("endInterview");
+    const downloadBtn = document.getElementById("downloadResult");
+
+    const questionText = document.getElementById("questionText");
+    const questionNumber = document.getElementById("questionNumber");
+    const answer = document.getElementById("answer");
+    const timer = document.getElementById("timer");
+
+    const camera = document.getElementById("camera");
+    const cameraStatus = document.getElementById("cameraStatus");
+    const micStatus = document.getElementById("micStatus");
+
+    const overallScore = document.getElementById("overallScore");
+    const communicationScore = document.getElementById("communicationScore");
+    const technicalScore = document.getElementById("technicalScore");
+    const confidenceScore = document.getElementById("confidenceScore");
+
+    const questions = [
+
+        "Tell me about yourself.",
+
+        "What are your strengths?",
+
+        "Explain your final year project.",
+
+        "Why should we hire you?",
+
+        "Where do you see yourself in 5 years?"
+
+    ];
+
+    let currentQuestion = 0;
+
+    let time = 300;
+
+    let countdown;
+
+    /*==========================
+      Start Interview
+    ==========================*/
+
+    startBtn.addEventListener("click", () => {
+
+        currentQuestion = 0;
+
+        questionNumber.innerText = "Question 1";
+
+        questionText.innerText = questions[0];
+
+        startTimer();
+
+        alert("Interview Started");
+
+    });
+
+    /*==========================
+      Timer
+    ==========================*/
+
+    function startTimer(){
+
+        clearInterval(countdown);
+
+        time = 300;
+
+        countdown = setInterval(()=>{
+
+            let min = Math.floor(time/60);
+
+            let sec = time%60;
+
+            timer.innerText =
+                String(min).padStart(2,"0")
+                + ":" +
+                String(sec).padStart(2,"0");
+
+            time--;
+
+            if(time < 0){
+
+                clearInterval(countdown);
+
+                alert("Interview Finished");
+
+            }
+
+        },1000);
+
+    }
+
+    /*==========================
+      Camera
+    ==========================*/
+
+    enableBtn.addEventListener("click", async ()=>{
+
+        try{
+
+            const stream =
+            await navigator.mediaDevices.getUserMedia({
+
+                video:true,
+
+                audio:true
+
+            });
+
+            camera.srcObject = stream;
+
+            cameraStatus.innerText="On";
+
+            micStatus.innerText="On";
+
+        }
+
+        catch{
+
+            alert("Camera Permission Denied");
+
+        }
+
+    });
+
+    /*==========================
+      Submit
+    ==========================*/
+
+    submitBtn.addEventListener("click",()=>{
+
+        if(answer.value.trim()==""){
+
+            alert("Please write your answer.");
+
+            return;
+
+        }
+
+        alert("Answer Submitted");
+
+    });
+
+    /*==========================
+      Next Question
+    ==========================*/
+
+    nextBtn.addEventListener("click",()=>{
+
+        answer.value="";
+
+        currentQuestion++;
+
+        if(currentQuestion>=questions.length){
+
+            currentQuestion=0;
+
+        }
+
+        questionNumber.innerText =
+        "Question "+(currentQuestion+1);
+
+        questionText.innerText =
+        questions[currentQuestion];
+
+    });
+
+    /*==========================
+      End Interview
+    ==========================*/
+
+    endBtn.addEventListener("click",()=>{
+
+        clearInterval(countdown);
+
+        const overall = Math.floor(Math.random()*15)+85;
+        const communication = Math.floor(Math.random()*15)+80;
+        const technical = Math.floor(Math.random()*15)+82;
+        const confidence = Math.floor(Math.random()*15)+84;
+
+        overallScore.innerText = overall+"%";
+        communicationScore.innerText = communication+"%";
+        technicalScore.innerText = technical+"%";
+        confidenceScore.innerText = confidence+"%";
+
+        localStorage.setItem("interviewScore",overall);
+
+        alert("Interview Completed");
+
+    });
+
+    /*==========================
+      Download Report
+    ==========================*/
+
+    downloadBtn.addEventListener("click",()=>{
+
+        const report=`
+
+AI Interview Report
+
+Overall Score : ${overallScore.innerText}
+
+Communication : ${communicationScore.innerText}
+
+Technical : ${technicalScore.innerText}
+
+Confidence : ${confidenceScore.innerText}
+
+Generated By AI Interview Preparation
+
+`;
+
+        const blob =
+        new Blob([report],{type:"text/plain"});
+
+        const link =
+        document.createElement("a");
+
+        link.href=
+        URL.createObjectURL(blob);
+
+        link.download=
+        "Interview_Report.txt";
+
+        link.click();
+
+    });
+
+});

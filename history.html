@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interview History</title>
+
+    <link rel="stylesheet" href="history.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="history-page">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h2>AI Interview</h2>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="resume.html">
+                    <i class="fa-solid fa-file"></i>
+                    Resume
+                </a>
+            </li>
+
+            <li>
+                <a href="interview.html">
+                    <i class="fa-solid fa-microphone"></i>
+                    Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="chatbot.html">
+                    <i class="fa-solid fa-robot"></i>
+                    AI Chatbot
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="history.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    History
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <h1>Interview History</h1>
+
+            <p>
+                View your previous interviews, resume analyses and performance reports.
+            </p>
+
+        </header>
+
+        <!-- Search & Filter -->
+
+        <section class="filter-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search interview...">
+
+            </div>
+
+            <div class="filter-box">
+
+                <select id="filterSelect">
+
+                    <option>All</option>
+                    <option>HR Interview</option>
+                    <option>Technical</option>
+                    <option>Resume Analysis</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <!-- History Table -->
+
+        <section class="history-table">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date</th>
+                        <th>Interview Type</th>
+                        <th>Score</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="historyTableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+        <!-- Performance Summary -->
+
+        <section class="summary-section">
+
+            <h2>Performance Summary</h2>
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                    <h3>Best Score</h3>
+
+                    <span>95%</span>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h3>Average Score</h3>
+
+                    <span>88%</span>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h3>Total Practice</h3>
+
+                    <span>15 Hours</span>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <i class="fa-solid fa-award"></i>
+
+                    <h3>Completed Interviews</h3>
+
+                    <span>24</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Action Buttons -->
+
+        <section class="history-actions">
+
+            <button id="downloadHistory" class="primary-btn">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download History
+
+            </button>
+
+            <button id="clearHistory" class="danger-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Clear History
+
+            </button>
+
+        </section>
+        <!-- Footer -->
+
+        <footer class="page-footer">
+
+            <p>
+
+                © 2026 AI Interview Preparation System.
+                All Rights Reserved.
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="history.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Career Chatbot</title>
+
+<link rel="stylesheet" href="chatbot.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="chatbot-page">
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-brain"></i>
+
+<h2>AI Interview</h2>
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li><a href="resume.html"><i class="fa-solid fa-file"></i> Resume</a></li>
+
+<li><a href="interview.html"><i class="fa-solid fa-microphone"></i> Interview</a></li>
+
+<li class="active"><a href="chatbot.html"><i class="fa-solid fa-robot"></i> AI Chatbot</a></li>
+
+<li><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i> History</a></li>
+
+<li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+<li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<header class="page-header">
+
+<h1>AI Career Chatbot</h1>
+
+<p>
+
+Ask interview, resume, coding and career related questions.
+
+</p>
+
+</header>
+
+<section class="chat-container">
+
+<div class="chat-box" id="chatBox">
+
+<div class="bot-message">
+
+Hello 👋
+
+I am your AI Career Assistant.
+
+Ask me anything about placements, coding, resumes or interviews.
+
+</div>
+</div>
+
+        <!-- Typing Indicator -->
+
+        <div class="typing-indicator" id="typingIndicator">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+        <!-- Suggestion Chips -->
+
+        <div class="suggestion-box">
+
+            <button class="suggestion">
+                Tell me about Java Interview
+            </button>
+
+            <button class="suggestion">
+                Python Interview Questions
+            </button>
+
+            <button class="suggestion">
+                Improve My Resume
+            </button>
+
+            <button class="suggestion">
+                HR Interview Tips
+            </button>
+
+            <button class="suggestion">
+                DSA Roadmap
+            </button>
+
+            <button class="suggestion">
+                AI Career Guidance
+            </button>
+
+        </div>
+
+        <!-- Chat Input -->
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Type your question here...">
+
+            <button id="sendBtn">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Chat Controls -->
+
+        <div class="chat-actions">
+
+            <button id="clearChat">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Clear Chat
+
+            </button>
+
+            <button id="voiceBtn">
+
+                <i class="fa-solid fa-microphone"></i>
+
+                Voice Input
+
+            </button>
+
+        </div>
+
+    </section>
+    <!-- Chat History -->
+
+        <section class="history-panel">
+
+            <h2>Recent Questions</h2>
+
+            <ul>
+
+                <li>✔ Tell me about Java OOPs</li>
+
+                <li>✔ Top HR Interview Questions</li>
+
+                <li>✔ Resume Improvement Tips</li>
+
+                <li>✔ DSA Roadmap for Placements</li>
+
+                <li>✔ Python Interview Questions</li>
+
+            </ul>
+
+        </section>
+
+        <!-- AI Features -->
+
+        <section class="ai-features">
+
+            <h2>AI Assistant Features</h2>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <h3>Coding Help</h3>
+
+                    <p>
+                        Solve programming and DSA doubts.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <h3>Resume Tips</h3>
+
+                    <p>
+                        Improve your resume with AI suggestions.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <h3>Interview Guidance</h3>
+
+                    <p>
+                        Prepare for HR and Technical interviews.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <h3>Career Advice</h3>
+
+                    <p>
+                        Get placement and career guidance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="page-footer">
+
+            <p>
+
+                © 2026 AI Interview Preparation System.
+                AI Career Chatbot Module.
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="chatbot.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Analyzer | AI Interview Preparation</title>
+
+    <link rel="stylesheet" href="resume.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="resume-page">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h2>AI Interview</h2>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="resume.html">
+                    <i class="fa-solid fa-file"></i>
+                    Resume Analyzer
+                </a>
+            </li>
+
+            <li>
+                <a href="interview.html">
+                    <i class="fa-solid fa-microphone"></i>
+                    Mock Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="chatbot.html">
+                    <i class="fa-solid fa-robot"></i>
+                    AI Chatbot
+                </a>
+            </li>
+
+            <li>
+                <a href="history.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    History
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <h1>AI Resume Analyzer</h1>
+
+            <p>
+                Upload your resume and get AI-powered analysis.
+            </p>
+
+        </header>
+
+        <!-- Upload Card -->
+
+        <section class="upload-card">
+
+            <i class="fa-solid fa-file-arrow-up upload-icon"></i>
+
+            <h2>Upload Resume</h2>
+
+            <p>
+                Supported Format: PDF (Maximum Size 5 MB)
+            </p>
+
+            <input
+                type="file"
+                id="resumeFile"
+                accept=".pdf">
+
+            <button id="analyzeBtn">
+                Analyze Resume
+            </button>
+
+        </section>
+        <!-- Resume Analysis -->
+
+        <section class="analysis-section">
+
+            <div class="score-card">
+
+                <h2>Resume Score</h2>
+
+                <div class="score-circle">
+
+                    <span id="resumeScore">85%</span>
+
+                </div>
+
+            </div>
+
+            <div class="skills-card">
+
+                <h2>Skills Detected</h2>
+
+                <div class="skill-list">
+
+                    <span>Python</span>
+
+                    <span>Java</span>
+
+                    <span>HTML</span>
+
+                    <span>CSS</span>
+
+                    <span>JavaScript</span>
+
+                    <span>SQL</span>
+
+                    <span>Machine Learning</span>
+
+                    <span>Git</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Analysis Details -->
+
+        <section class="details-grid">
+
+            <div class="detail-card strengths">
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Strengths
+
+                </h2>
+
+                <ul>
+
+                    <li>Professional Resume Format</li>
+
+                    <li>Strong Technical Skills</li>
+
+                    <li>Projects Included</li>
+
+                    <li>Education Well Structured</li>
+
+                </ul>
+
+            </div>
+
+            <div class="detail-card weaknesses">
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-xmark"></i>
+
+                    Weaknesses
+
+                </h2>
+
+                <ul>
+
+                    <li>No Certifications Added</li>
+
+                    <li>Missing Internship Experience</li>
+
+                    <li>Resume Summary Needs Improvement</li>
+
+                </ul>
+
+            </div>
+
+            <div class="detail-card missing">
+
+                <h2>
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    Missing Skills
+
+                </h2>
+
+                <ul>
+
+                    <li>Docker</li>
+
+                    <li>AWS</li>
+
+                    <li>REST API</li>
+
+                    <li>System Design</li>
+
+                </ul>
+
+            </div>
+
+            <div class="detail-card suggestions">
+
+                <h2>
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    AI Suggestions
+
+                </h2>
+
+                <ul>
+
+                    <li>Add measurable project achievements.</li>
+
+                    <li>Include certifications.</li>
+
+                    <li>Add GitHub & LinkedIn profile links.</li>
+
+                    <li>Keep resume limited to one page.</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+        <!-- Action Buttons -->
+
+        <section class="action-buttons">
+
+            <button id="downloadReport" class="primary-btn">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download Report
+
+            </button>
+
+            <button id="uploadAnother" class="secondary-btn">
+
+                <i class="fa-solid fa-upload"></i>
+
+                Upload Another Resume
+
+            </button>
+
+        </section>
+
+        <!-- Resume History -->
+
+        <section class="history-section">
+
+            <h2>Recent Resume Analysis</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date</th>
+
+                        <th>Resume</th>
+
+                        <th>Score</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>01 Aug 2026</td>
+
+                        <td>Resume_v3.pdf</td>
+
+                        <td>85%</td>
+
+                        <td>Completed</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>28 Jul 2026</td>
+
+                        <td>Resume_v2.pdf</td>
+
+                        <td>80%</td>
+
+                        <td>Completed</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>20 Jul 2026</td>
+
+                        <td>Resume_v1.pdf</td>
+
+                        <td>74%</td>
+
+                        <td>Completed</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="page-footer">
+
+            <p>
+
+                © 2026 AI Interview Preparation System.
+                AI Resume Analyzer Module.
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="resume.js"></script>
+
+</body>
+
+</html>

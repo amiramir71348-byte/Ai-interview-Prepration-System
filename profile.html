@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | AI Interview Preparation</title>
+
+    <link rel="stylesheet" href="profile.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="profile-page">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h2>AI Interview</h2>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="resume.html">
+                    <i class="fa-solid fa-file"></i>
+                    Resume
+                </a>
+            </li>
+
+            <li>
+                <a href="interview.html">
+                    <i class="fa-solid fa-microphone"></i>
+                    Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="chatbot.html">
+                    <i class="fa-solid fa-robot"></i>
+                    AI Chatbot
+                </a>
+            </li>
+
+            <li>
+                <a href="history.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    History
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <h1>My Profile</h1>
+
+            <p>
+                Manage your personal information and account settings.
+            </p>
+
+        </header>
+
+        <!-- Profile Card -->
+
+        <section class="profile-card">
+
+            <div class="profile-image">
+
+                <img src="assets/images/profile.png"
+                     alt="Profile">
+
+                <button id="changePhoto">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    Change Photo
+
+                </button>
+
+            </div>
+
+            <div class="profile-info">
+
+                <h2 id="userName">Mohd Amir</h2>
+
+                <p id="userEmail">
+
+                    amiramir71348@gmail.com
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    B.Tech - Artificial Intelligence & Machine Learning
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    India
+
+                </p>
+
+            </div>
+
+        </section>
+        <!-- Personal Information -->
+
+        <section class="profile-form">
+
+            <h2>Personal Information</h2>
+
+            <form id="profileForm">
+
+                <div class="input-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>College Name</label>
+
+                    <input
+                        type="text"
+                        id="college"
+                        placeholder="Enter your college name">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Course</label>
+
+                    <input
+                        type="text"
+                        id="course"
+                        placeholder="B.Tech AIML">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Skills</label>
+
+                    <input
+                        type="text"
+                        id="skills"
+                        placeholder="Python, Java, HTML, CSS, JavaScript">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>GitHub Profile</label>
+
+                    <input
+                        type="url"
+                        id="github"
+                        placeholder="https://github.com/username">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>LinkedIn Profile</label>
+
+                    <input
+                        type="url"
+                        id="linkedin"
+                        placeholder="https://linkedin.com/in/username">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>About Me</label>
+
+                    <textarea
+                        id="about"
+                        rows="5"
+                        placeholder="Write something about yourself..."></textarea>
+
+                </div>
+
+                <button
+                    type="submit"
+                    id="saveProfile">
+
+                    Save Profile
+
+                </button>
+
+            </form>
+
+        </section>
+        <!-- Profile Statistics -->
+
+        <section class="profile-stats">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-file"></i>
+
+                <h3>Resume Score</h3>
+
+                <span>85%</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-microphone"></i>
+
+                <h3>Interviews Taken</h3>
+
+                <span>12</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-award"></i>
+
+                <h3>Average Score</h3>
+
+                <span>88%</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <h3>AI Chat Questions</h3>
+
+                <span>145</span>
+
+            </div>
+
+        </section>
+
+        <!-- Achievements -->
+
+        <section class="achievement-section">
+
+            <h2>Achievements</h2>
+
+            <div class="achievement-grid">
+
+                <div class="achievement-card">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                    <h3>Resume Expert</h3>
+
+                    <p>Scored above 80% in Resume Analysis.</p>
+
+                </div>
+
+                <div class="achievement-card">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <h3>Interview Master</h3>
+
+                    <p>Completed 10+ AI Mock Interviews.</p>
+
+                </div>
+
+                <div class="achievement-card">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                    <h3>Placement Ready</h3>
+
+                    <p>Excellent performance in all interview modules.</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Account Settings -->
+
+        <section class="account-settings">
+
+            <h2>Account Settings</h2>
+
+            <button id="changePassword">
+
+                <i class="fa-solid fa-key"></i>
+
+                Change Password
+
+            </button>
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="page-footer">
+
+            <p>
+
+                © 2026 AI Interview Preparation System.
+                User Profile Module.
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="profile.js"></script>
+
+</body>
+
+</html>

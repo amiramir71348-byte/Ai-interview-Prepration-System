@@ -1,0 +1,576 @@
+/*=========================================
+ interview.css (Part 1)
+ AI Interview Preparation
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --primary:#2563eb;
+    --secondary:#0f172a;
+    --success:#22c55e;
+    --danger:#ef4444;
+    --warning:#f59e0b;
+    --white:#ffffff;
+    --light:#f8fafc;
+    --gray:#64748b;
+    --border:#e5e7eb;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+body{
+    background:#f5f7fb;
+    color:#1e293b;
+}
+
+/*============== Layout ==============*/
+
+.interview-page{
+    display:flex;
+    min-height:100vh;
+}
+
+/*============== Sidebar ==============*/
+
+.sidebar{
+    width:260px;
+    background:var(--secondary);
+    color:#fff;
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    padding:30px 20px;
+}
+
+.sidebar .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:40px;
+}
+
+.sidebar .logo i{
+    font-size:34px;
+    color:#60a5fa;
+}
+
+.sidebar .logo h2{
+    font-size:24px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin-bottom:12px;
+}
+
+.sidebar ul li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:#cbd5e1;
+    padding:14px 18px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar ul li.active a,
+.sidebar ul li a:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+/*============== Main Content ==============*/
+
+.main-content{
+    flex:1;
+    margin-left:260px;
+    padding:35px;
+}
+
+.page-header{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    font-size:34px;
+    color:var(--secondary);
+}
+
+.page-header p{
+    color:var(--gray);
+    margin-top:8px;
+}
+
+/*============== Setup Card ==============*/
+
+.setup-card{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    margin-bottom:35px;
+}
+
+.setup-card h2{
+    margin-bottom:12px;
+    color:var(--secondary);
+}
+
+.setup-card select{
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    font-size:16px;
+}
+
+#startInterview{
+    width:100%;
+    padding:15px;
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#startInterview:hover{
+    background:#1d4ed8;
+}
+/*=========================================
+ interview.css (Part 2)
+ Interview Screen
+=========================================*/
+
+/*============== Interview Section ==============*/
+
+.interview-section{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+    margin-bottom:35px;
+}
+
+/*============== Question Panel ==============*/
+
+.question-panel{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.question-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.question-header h2{
+    color:var(--secondary);
+}
+
+.timer{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#eff6ff;
+    color:var(--primary);
+    padding:10px 18px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.question-box{
+    background:#f8fafc;
+    border-left:5px solid var(--primary);
+    border-radius:10px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.question-box h3{
+    color:var(--secondary);
+    margin-bottom:12px;
+}
+
+.question-box p{
+    color:var(--gray);
+    line-height:1.8;
+}
+
+/*============== Answer Box ==============*/
+
+.answer-box label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:var(--secondary);
+}
+
+.answer-box textarea{
+    width:100%;
+    resize:none;
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:15px;
+    font-size:15px;
+    min-height:220px;
+    outline:none;
+}
+
+.answer-box textarea:focus{
+    border-color:var(--primary);
+}
+
+/*============== Buttons ==============*/
+
+.button-group{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.button-group button{
+    flex:1;
+    border:none;
+    border-radius:10px;
+    padding:14px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+#submitAnswer{
+    background:var(--success);
+    color:#fff;
+}
+
+#submitAnswer:hover{
+    background:#16a34a;
+}
+
+#nextQuestion{
+    background:var(--primary);
+    color:#fff;
+}
+
+#nextQuestion:hover{
+    background:#1d4ed8;
+}
+
+/*============== Camera Panel ==============*/
+
+.camera-panel{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.camera-panel h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:var(--secondary);
+}
+
+.camera-box{
+    width:100%;
+    height:260px;
+    background:#0f172a;
+    border-radius:12px;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.camera-box video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/*============== Status ==============*/
+
+.status-box{
+    margin-bottom:20px;
+}
+
+.status-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:15px;
+    color:var(--gray);
+}
+
+.status-item i{
+    color:var(--primary);
+    font-size:20px;
+}
+
+#enableCamera{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:var(--primary);
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#enableCamera:hover{
+    background:#1d4ed8;
+}
+/*=========================================
+ interview.css (Part 3)
+ Feedback, Footer, Responsive
+=========================================*/
+
+/*============== Feedback Section ==============*/
+
+.feedback-section{
+    margin-bottom:35px;
+}
+
+.feedback-section h2{
+    margin-bottom:20px;
+    color:var(--secondary);
+}
+
+.feedback-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.feedback-card{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    text-align:center;
+    transition:.3s;
+}
+
+.feedback-card:hover{
+    transform:translateY(-8px);
+}
+
+.feedback-card i{
+    font-size:40px;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.feedback-card h3{
+    margin-bottom:10px;
+    color:var(--secondary);
+}
+
+.feedback-card span{
+    font-size:30px;
+    font-weight:700;
+    color:var(--success);
+}
+
+/*============== Suggestions ==============*/
+
+.suggestion-section{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    margin-bottom:35px;
+}
+
+.suggestion-section h2{
+    margin-bottom:20px;
+}
+
+.suggestion-section ul{
+    padding-left:20px;
+}
+
+.suggestion-section li{
+    margin-bottom:12px;
+    color:var(--gray);
+    line-height:1.7;
+}
+
+/*============== Controls ==============*/
+
+.interview-controls{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:35px;
+}
+
+.primary-btn,
+.danger-btn{
+    border:none;
+    padding:14px 30px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.primary-btn{
+    background:var(--primary);
+    color:#fff;
+}
+
+.primary-btn:hover{
+    background:#1d4ed8;
+}
+
+.danger-btn{
+    background:var(--danger);
+    color:#fff;
+}
+
+.danger-btn:hover{
+    background:#dc2626;
+}
+
+/*============== Footer ==============*/
+
+.page-footer{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.page-footer p{
+    color:var(--gray);
+}
+
+/*============== Animation ==============*/
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.setup-card,
+.question-panel,
+.camera-panel,
+.feedback-card,
+.suggestion-section,
+.page-footer{
+    animation:fadeUp .6s ease;
+}
+
+/*============== Responsive ==============*/
+
+@media(max-width:992px){
+
+    .interview-section{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        width:80px;
+        padding:20px 10px;
+    }
+
+    .sidebar .logo h2{
+        display:none;
+    }
+
+    .sidebar ul li a{
+        justify-content:center;
+        font-size:0;
+    }
+
+    .sidebar ul li a i{
+        font-size:20px;
+    }
+
+    .main-content{
+        margin-left:80px;
+        padding:20px;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:15px;
+    }
+
+    .page-header h1{
+        font-size:26px;
+    }
+
+    .camera-box{
+        height:200px;
+    }
+
+    .feedback-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/*============== Utility ==============*/
+
+.hidden{
+    display:none;
+}
+
+.text-center{
+    text-align:center;
+}
